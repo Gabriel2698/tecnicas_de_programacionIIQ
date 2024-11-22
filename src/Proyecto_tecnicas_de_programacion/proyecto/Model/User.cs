@@ -11,7 +11,7 @@ namespace Proyecto.Model
     public class User
     {
 
-        public User(int id, string nombre, string apellido, string clase){
+        public User(string id, string nombre, string apellido, string clase){
 
              this.clase = clase;
              this.nombre = nombre;
@@ -19,6 +19,7 @@ namespace Proyecto.Model
             this.id = id;
             }
 
+     
         public string nombre { get; set; }
 
         
@@ -33,7 +34,7 @@ namespace Proyecto.Model
       
 
 
-    public int id { get; set; }
+    public string id { get; set; }
 
 
 
