@@ -57,11 +57,13 @@ namespace proyecto
 
         private void btnInicio_Click(object sender, EventArgs e)
         {
-            Admin form2 = new Admin();
-            // Mostrar Form2
-            form2.Show();
-            // Opcional: Ocultar Form1
-             this.Hide();
+
+            Usuarios form2 = new Usuarios(); // Crea una instancia del segundo formulario
+            this.Hide(); // Oculta el primer formulario
+            form2.Show(); //
+
+
+
         }
     }
 }

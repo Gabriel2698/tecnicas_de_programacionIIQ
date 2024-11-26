@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using Microsoft.VisualBasic.FileIO;
 namespace Proyecto
 {
     public partial class Usuarios : Form
@@ -24,7 +24,10 @@ namespace Proyecto
 
         private void button1_Click(object sender, EventArgs e)
         {
-            this.Close();
+            proyecto.Form1 login = new proyecto.Form1(); // Crea una instancia del  formulario login
+            this.Close(); // Cierra el formulario admin 
+            login.Show();
+
         }
 
         private void button1_Click_1(object sender, EventArgs e)

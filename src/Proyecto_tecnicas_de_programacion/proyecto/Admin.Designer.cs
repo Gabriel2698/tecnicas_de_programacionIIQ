@@ -119,6 +119,7 @@
             Controls.Add(btnMostrar);
             Name = "Admin";
             Text = "Admin";
+            Load += Admin_Load;
             ResumeLayout(false);
         }
 
