@@ -1,4 +1,5 @@
 using System.Diagnostics.Metrics;
+using Proyecto;
 
 namespace proyecto
 {
@@ -6,20 +7,15 @@ namespace proyecto
     {
         public Form1()
         {
-          InitializeComponent();
-            
-          
-            this.controller = new PersonController();
-            var people = controller.GetPeople();
+            InitializeComponent();
 
-            this.listView1.Columns.Add(Text = NameColumn, Width = 100);
-            this.listView1.Columns.Add(Text = Apellido, Width = 100);
-            this.listView1.Columns.Add(Text = Country, Width = 100);
-            this.listView1.Items.AddRange(people.Select(p => new ListViewItem([p.Nombre, p.Apellido, p.Clase,p.Id])).ToArray());  
-            
-            
-            
-          
+
+
+
+
+
+
+
         }
 
 
@@ -29,7 +25,7 @@ namespace proyecto
 
 
 
-           
+
 
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -57,6 +53,15 @@ namespace proyecto
             txtNombre.Clear();
 
 
+        }
+
+        private void btnInicio_Click(object sender, EventArgs e)
+        {
+            Admin form2 = new Admin();
+            // Mostrar Form2
+            form2.Show();
+            // Opcional: Ocultar Form1
+             this.Hide();
         }
     }
 }

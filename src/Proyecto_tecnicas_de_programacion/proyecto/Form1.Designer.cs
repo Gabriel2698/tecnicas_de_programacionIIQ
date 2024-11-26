@@ -55,6 +55,7 @@
             btnInicio.TabIndex = 1;
             btnInicio.Text = "INICIO";
             btnInicio.UseVisualStyleBackColor = true;
+            btnInicio.Click += btnInicio_Click;
             // 
             // lblContraseña
             // 

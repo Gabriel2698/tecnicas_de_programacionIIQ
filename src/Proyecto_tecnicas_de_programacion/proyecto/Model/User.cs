@@ -11,13 +11,17 @@ namespace Proyecto.Model
     public class User
     {
 
-        public User(string id, string nombre, string apellido, string clase){
+        public User(string id, string nombre, string apellido, string clase,string contrasena ,string clases ,string entrenadores){
 
              this.clase = clase;
              this.nombre = nombre;
              this.apellido = apellido;
             this.id = id;
-            }
+            this.contrasena = contrasena;
+            this.clases = clases;
+            this.entrenadores = entrenadores;
+
+        }
 
      
         public string nombre { get; set; }
@@ -38,15 +42,16 @@ namespace Proyecto.Model
 
 
 
+        public string entrenadores { get; set; }
+
+
+        public string contrasena { get; set; }
 
 
 
+        public string clases { get; set; }
 
-
-
-
-
-  }
+    }
 
 }
 
