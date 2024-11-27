@@ -8,10 +8,10 @@ namespace Proyecto.Model
 {/// <summary>
 ///declaro las variables de los atributos de la clase user.
 /// </summary>
-    public class User
+    public class Person
     {
 
-        public User(string id, string nombre, string apellido, string clase,string contrasena  ,string entrenadores){
+        public Person(string id, string nombre, string apellido, string clase,string contrasena  ,string entrenadores){
 
              this.clase = clase;
              this.nombre = nombre;

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using Proyecto.Controller;
 namespace Proyecto.Controller.Configuration
 {
     /// <summary>
@@ -17,6 +17,6 @@ namespace Proyecto.Controller.Configuration
         /// <value>
         /// The people file.
         /// </value>
-        public static string UserFile => "Users.csv";
+        public static string PeopleFile => "Assets.Users.csv";
     }
 }

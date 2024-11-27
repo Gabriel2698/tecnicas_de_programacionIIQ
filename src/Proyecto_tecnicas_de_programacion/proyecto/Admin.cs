@@ -11,6 +11,9 @@ using System.Windows;
 using Microsoft.VisualBasic.FileIO;
 using System.IO;
 using Microsoft.VisualBasic.ApplicationServices;
+using Proyecto.Model;
+using Proyecto.Controller;
+
 namespace Proyecto
 {
 
@@ -19,9 +22,22 @@ namespace Proyecto
 
     public partial class Admin : Form
     {
+
+public List<Person> People { get;set; }
+        private PersonController Controller { get; set; }
+
+
+
         public Admin()
         {
             InitializeComponent();
+
+            this.People = new List<Person>();
+            this.Controller = new PersonController();
+            this.People =  this.Controller.GetPeople();
+
+
+
 
         }
 
@@ -29,54 +45,7 @@ namespace Proyecto
         {
 
 
-        string    filePath=Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "proyecto","DB" ,"users.csv");
-
-
-            if (File.Exists(filePath))
-            {
-                List<User> users = LoadUsersFromCsv(filePath);
-               Proyecto.Tabla formT = Proyecto.Tabla(users, filePath); // Pasamos la lista de usuarios y la ruta del archivo
-                formT.Show();
-            }
-            else
-            {
-                MessageBox.Show("El archivo no se encontró.");
-            }
-        }
-
-        private List<User> LoadUsersFromCsv(string filePath)
-        {
-            List<User> users = new List<User>();
-            using (TextFieldParser parser = new TextFieldParser(filePath))
-            {
-                parser.TextFieldType = FieldType.Delimited;
-                parser.SetDelimiters(",");
-
-                // Saltar la primera línea si contiene encabezados
-                if (!parser.EndOfData)
-                {
-                    parser.ReadLine();
-                }
-
-                while (!parser.EndOfData)
-                {
-                    string[] fields = parser.ReadFields();
-                    User user = new User
-                    {
-                        Id = int.Parse(fields[0]),
-                        Nombre = fields[1],
-                        Apellido = fields[2],
-                        Clases = fields[3],
-                        Entrenador = bool.Parse(fields[4]),
-                        Contrasena = fields[5]
-                    };
-                    users.Add(user);
-                }
-            }
-            return users;
-        }
-
-
+        
 
 
         }
