@@ -17,6 +17,6 @@ namespace Proyecto.Controller.Configuration
         /// <value>
         /// The people file.
         /// </value>
-        public static string PeopleFile => "Assets.Users.csv";
+        public static string PeopleFile => "Users.csv";
     }
 }
