@@ -80,25 +80,25 @@ namespace proyecto
             }
             foreach (var item in this.People)
             {
-                if (user == $"{item.id}" && pass == item.contrasena)
+                if (user == $"{item.nombre}" && pass == item.contrasena)
                 {
                     MessageBox.Show("Login Success");
 
-                    return;
 
+
+      
+
+
+                     var Admin = new Admin(); // Crea una instancia del segundo formulario
+                    this.Hide(); // Oculta el primer formulario
+                     Admin.Show(); //
+            
+                               return;
 
                 }
-                if
-                    (user == $" {item.entrenadores}=si" && pass == item.contrasena)
-                {
-                    MessageBox.Show("Login admin");
-                 
-
-                    var Admin = new Admin(); // Crea una instancia del segundo formulario
-                    this.Hide(); // Oculta el primer formulario
-                    Admin.Show(); //
-                  return;
-                } 
+               
+                
+                  
                 else
                 {
                     MessageBox.Show("Login Failed");

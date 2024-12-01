@@ -87,7 +87,7 @@
             // 
             // btnCerrar
             // 
-            btnCerrar.Location = new Point(668, 258);
+            btnCerrar.Location = new Point(671, 258);
             btnCerrar.Name = "btnCerrar";
             btnCerrar.Size = new Size(88, 29);
             btnCerrar.TabIndex = 5;

@@ -3,14 +3,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Proyecto.Model;
-using Proyecto.Controller;
+using System.IO;
+
+
+using Proyecto.Controller.DataHandler;
+
 namespace Proyecto.Controller.DataHandler
 {
-    using Model;
-    using Proyecto.Controller.DataHandler.Controller.DataHandler;
-
-
+  using Proyecto.Model;
+  
     /// <summary>
     /// Implementation of <see cref="IDataHandler"/> when using files.
     /// </summary>
@@ -36,7 +37,7 @@ namespace Proyecto.Controller.DataHandler
                 var userLine = lines[i].Split(',');
                 if (userLine.Length == 3)
                 {
-                    result.Add(new Person(userLine[0], userLine[1], userLine[2], userLine[3], userLine[4], userLine[5]));
+                    result.Add(new Person(userLine[0], userLine[1], userLine[2], userLine[3], userLine[4], userLine[5], userLine[6]));
                 }
             }
 
@@ -47,10 +48,12 @@ namespace Proyecto.Controller.DataHandler
         /// Reads the data from a file.
         /// </summary>
         public string ReadData()
+
         {
-            var path = Path.Combine(Directory.GetCurrentDirectory(), this.Assets, Configuration.Configuration.PeopleFile);
+            var path = Path.Combine(Directory.GetCurrentDirectory() ,"Controller","Assets","Users.csv");
             var fileString = File.ReadAllText(path);
             return fileString;
+
         }
 
         /// <summary>
@@ -59,7 +62,7 @@ namespace Proyecto.Controller.DataHandler
         /// <param name="data">The data.</param>
         public void WriteData(string data)
         {
-            var path = Path.Combine(Directory.GetCurrentDirectory(), this.Assets, "Users.csv");
+            var path = Path.Combine(Directory.GetCurrentDirectory(), "Controller","Assets", "Users.csv");
             File.WriteAllText(path, data);
         }
     }

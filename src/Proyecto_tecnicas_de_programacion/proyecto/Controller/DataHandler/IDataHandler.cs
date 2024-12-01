@@ -7,34 +7,34 @@ using Proyecto.Model;
 using Proyecto.Controller;
 namespace Proyecto.Controller.DataHandler
 {
-    namespace Controller.DataHandler
+
+    using Model;
+    /// <summary>
+    /// Contract for elements who handles data.
+    /// </summary>
+    public interface IDataHandler
     {
         /// <summary>
-        /// Contract for elements who handles data.
+        /// Gets the persons.
         /// </summary>
-        public interface IDataHandler
-        {
-            /// <summary>
-            /// Gets the persons.
-            /// </summary>
-            /// <param name="people">The people.</param>
-            /// <returns> A list with the people in the system.</returns>
-            public List<Person> GetPeople(string people);
+        /// <param name="people">The people.</param>
+        /// <returns> A list with the people in the system.</returns>
+        public List<Person> GetPeople(string people);
 
-            /// <summary>
-            /// Reads the data.
-            /// </summary>
-            public string ReadData();
+        /// <summary>
+        /// Reads the data.
+        /// </summary>
+        public string ReadData();
 
-            /// <summary>
-            /// Writes the data.
-            /// </summary>
-            /// <param name="data">The data.</param>
-            public void WriteData(string data);
-        }
-
-
+        /// <summary>
+        /// Writes the data.
+        /// </summary>
+        /// <param name="data">The data.</param>
+        public void WriteData(string data);
     }
+
+
+}
        
    
-}
+

@@ -11,40 +11,41 @@ namespace Proyecto.Model
     public class Person
     {
 
-        public Person(string id, string nombre, string apellido, string clase,string contrasena  ,string entrenadores){
+        public Person(string ID, string Nombre, string Apellido, string Clase,string Contrasena  ,string Entrenadores,string Membrecia){
 
-             this.clase = clase;
-             this.nombre = nombre;
-             this.apellido = apellido;
-            this.id = id;
-            this.contrasena = contrasena;
-            this.entrenadores = entrenadores;
+             this.Clase = Clase;
+             this.Nombre = Nombre;
+             this.Apellido = Apellido;
+            this.ID =ID;
+            this.Contrasena = Contrasena;
+            this.Entrenadores =  Entrenadores;
+            this.Membrecia = Membrecia;  
 
         }
-
+        public string Membrecia { get; set; }
      
-        public string nombre { get; set; }
+        public string Nombre { get; set; }
 
         
 
 
-      public string apellido{ get; set; }
+      public string Apellido{ get; set; }
 
     
 
-      public string clase{ get; set; }
+      public string Clase{ get; set; }
 
       
 
 
-    public string id { get; set; }
+    public string ID { get; set; }
 
 
 
-        public string entrenadores { get; set; }
+        public string Entrenadores { get; set; }
 
 
-        public string contrasena { get; set; }
+        public string Contrasena { get; set; }
 
 
 

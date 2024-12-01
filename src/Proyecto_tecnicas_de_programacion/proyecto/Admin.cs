@@ -45,7 +45,15 @@ public List<Person> People { get;set; }
         {
 
 
-        
+
+            Proyecto.Tabla Mostrar = new Proyecto.Tabla(); // Crea una instancia del  formulario login
+            this.Hide();
+            Mostrar.Show();
+            return;
+
+
+
+
 
 
         }
@@ -68,8 +76,10 @@ public List<Person> People { get;set; }
 
         private void btnCerrar_Click(object sender, EventArgs e)
         {
-
+  
+  
             Application.Exit();
+      
         }
 
         private void button1_Click_2(object sender, EventArgs e)
