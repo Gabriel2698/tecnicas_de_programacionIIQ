@@ -80,7 +80,7 @@ namespace proyecto
             }
             foreach (var item in this.People)
             {
-                if (user == $"{item.nombre}" && pass == item.contrasena)
+                if (user == $"{item.Nombre}" && pass == item.Contrasena)
                 {
                     MessageBox.Show("Login Success");
 

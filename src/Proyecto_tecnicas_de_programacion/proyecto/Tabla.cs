@@ -23,7 +23,7 @@ namespace Proyecto
         private readonly string Clase = "Clase";
         private readonly string Entrenador = "Entrenador";
         private readonly string Membrecia = "Membrecía";
-        private readonly string NameColumn = "id";
+        private readonly string NameColumn = "ID";
 
 
 
@@ -38,7 +38,7 @@ namespace Proyecto
             var people = controller.GetPeople();
 
             this.listView1.Columns.Add(Text = NameColumn, Width = 100);
-            this.listView1.Columns.Add(Text = id, Width = 100);
+            this.listView1.Columns.Add(Text = Nombre, Width = 100);
             this.listView1.Columns.Add(Text = Apellido, Width = 100);
             this.listView1.Columns.Add(Text = Contrasena, Width = 100);
             this.listView1.Columns.Add(Text = Clase, Width = 100);
