@@ -35,6 +35,8 @@
             btnMostrarM = new Button();
             btnCerrar = new Button();
             btnMenu = new Button();
+            lbClases = new ListBox();
+            textBox1 = new TextBox();
             SuspendLayout();
             // 
             // btnMostrar
@@ -49,7 +51,7 @@
             // 
             // btnVentas
             // 
-            btnVentas.Location = new Point(603, 159);
+            btnVentas.Location = new Point(569, 357);
             btnVentas.Name = "btnVentas";
             btnVentas.Size = new Size(185, 41);
             btnVentas.TabIndex = 1;
@@ -75,6 +77,7 @@
             btnMostrarC.TabIndex = 3;
             btnMostrarC.Text = "Mostrar Clases";
             btnMostrarC.UseVisualStyleBackColor = true;
+            btnMostrarC.Click += btnMostrarC_Click;
             // 
             // btnMostrarM
             // 
@@ -105,11 +108,29 @@
             btnMenu.UseVisualStyleBackColor = true;
             btnMenu.Click += button1_Click_2;
             // 
+            // lbClases
+            // 
+            lbClases.FormattingEnabled = true;
+            lbClases.Location = new Point(190, 146);
+            lbClases.Name = "lbClases";
+            lbClases.Size = new Size(150, 104);
+            lbClases.TabIndex = 8;
+            lbClases.SelectedIndexChanged += listBox2_SelectedIndexChanged;
+            // 
+            // textBox1
+            // 
+            textBox1.Location = new Point(426, 78);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(143, 27);
+            textBox1.TabIndex = 9;
+            // 
             // Admin
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(textBox1);
+            Controls.Add(lbClases);
             Controls.Add(btnMenu);
             Controls.Add(btnCerrar);
             Controls.Add(btnMostrarM);
@@ -121,6 +142,7 @@
             Text = "Admin";
             Load += Admin_Load;
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -132,5 +154,7 @@
         private Button btnMostrarM;
         private Button btnCerrar;
         private Button btnMenu;
+        private ListBox lbClases;
+        private TextBox textBox1;
     }
 }

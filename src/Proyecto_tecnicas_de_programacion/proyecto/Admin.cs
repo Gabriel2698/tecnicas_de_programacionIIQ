@@ -23,7 +23,7 @@ namespace Proyecto
     public partial class Admin : Form
     {
 
-public List<Person> People { get;set; }
+        public List<Person> People { get; set; }
         private PersonController Controller { get; set; }
 
 
@@ -34,7 +34,7 @@ public List<Person> People { get;set; }
 
             this.People = new List<Person>();
             this.Controller = new PersonController();
-            this.People =  this.Controller.GetPeople();
+            this.People = this.Controller.GetPeople();
 
 
 
@@ -76,10 +76,10 @@ public List<Person> People { get;set; }
 
         private void btnCerrar_Click(object sender, EventArgs e)
         {
-  
-  
+
+
             Application.Exit();
-      
+
         }
 
         private void button1_Click_2(object sender, EventArgs e)
@@ -95,6 +95,20 @@ public List<Person> People { get;set; }
         }
 
         private void Admin_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnMostrarC_Click(object sender, EventArgs e)
+        {
+            var people = Controller.GetPeople();
+            this.textBox1.Text= string.Join(Environment.NewLine, people.Select(p => p.Clase));
+
+
+
+        }
+
+        private void listBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }

@@ -9,6 +9,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Include="Controller\controler.csproj" />
     <None Include="Model\Model.csproj" />
   </ItemGroup>
 
