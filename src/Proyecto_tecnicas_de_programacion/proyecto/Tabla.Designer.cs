@@ -35,9 +35,9 @@
             // 
             // listView1
             // 
-            listView1.Location = new Point(27, 38);
+            listView1.Location = new Point(27, 12);
             listView1.Name = "listView1";
-            listView1.Size = new Size(455, 400);
+            listView1.Size = new Size(429, 400);
             listView1.TabIndex = 1;
             listView1.UseCompatibleStateImageBehavior = false;
             listView1.View = View.Details;

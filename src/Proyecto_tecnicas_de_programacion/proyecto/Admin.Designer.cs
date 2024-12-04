@@ -35,8 +35,8 @@
             btnMostrarM = new Button();
             btnCerrar = new Button();
             btnMenu = new Button();
-            lbClases = new ListBox();
             textBox1 = new TextBox();
+            textBox2 = new TextBox();
             SuspendLayout();
             // 
             // btnMostrar
@@ -108,15 +108,6 @@
             btnMenu.UseVisualStyleBackColor = true;
             btnMenu.Click += button1_Click_2;
             // 
-            // lbClases
-            // 
-            lbClases.FormattingEnabled = true;
-            lbClases.Location = new Point(190, 146);
-            lbClases.Name = "lbClases";
-            lbClases.Size = new Size(150, 104);
-            lbClases.TabIndex = 8;
-            lbClases.SelectedIndexChanged += listBox2_SelectedIndexChanged;
-            // 
             // textBox1
             // 
             textBox1.Location = new Point(426, 78);
@@ -124,13 +115,20 @@
             textBox1.Size = new Size(143, 27);
             textBox1.TabIndex = 9;
             // 
+            // textBox2
+            // 
+            textBox2.Location = new Point(616, 78);
+            textBox2.Name = "textBox2";
+            textBox2.Size = new Size(143, 27);
+            textBox2.TabIndex = 10;
+            // 
             // Admin
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(textBox2);
             Controls.Add(textBox1);
-            Controls.Add(lbClases);
             Controls.Add(btnMenu);
             Controls.Add(btnCerrar);
             Controls.Add(btnMostrarM);
@@ -156,5 +154,6 @@
         private Button btnMenu;
         private ListBox lbClases;
         private TextBox textBox1;
+        private TextBox textBox2;
     }
 }

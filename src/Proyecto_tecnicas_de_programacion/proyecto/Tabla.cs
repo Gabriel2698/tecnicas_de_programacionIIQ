@@ -10,7 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Proyecto.Controller;
-
+using CsvHelper;
 namespace Proyecto
 {
     public partial class Tabla : Form
@@ -65,16 +65,17 @@ namespace Proyecto
 
         private void listView1_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+  
+            
         }
 
         private void btnMostar_Click(object sender, EventArgs e)
         {
+
             var dataStr = $"{this.NameColumn},{this.Nombre},{this.Apellido},{this.Contrasena},{this.Clase},{this.Entrenador},{this.Membrecia},{Environment.NewLine}";
             this.controller.UpdateItems(dataStr);
 
 
-            
 
 
 
